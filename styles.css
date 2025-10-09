@@ -1,0 +1,584 @@
+/* Custom styles for Bitcoin presentation */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Design system */
+:root {
+    --accent: #f7931a;
+    --accent-strong: #e8841a;
+    --text: #111827;
+    --muted: #6b7280;
+    --surface: #f8f9fa;
+    --surface-2: #ffffff;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --radius: 12px;
+}
+
+/* Global styles */
+.reveal {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    font-weight: 600;
+    text-transform: none;
+    line-height: 1.2;
+}
+
+.reveal h1 {
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    margin-bottom: 0.5em;
+}
+
+.reveal h2 {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+    margin-bottom: 1em;
+    color: #f7931a;
+    position: relative;
+    padding-bottom: 0.35em;
+}
+.reveal h2:after {
+    content: '';
+    display: block;
+    width: 56px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin-top: 0.35em;
+}
+
+.reveal h3 {
+    font-size: clamp(1.3rem, 3.5vw, 1.6rem);
+    margin-bottom: 0.8em;
+    color: #333;
+}
+
+.reveal h4 {
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+    margin-bottom: 0.6em;
+    color: #555;
+}
+
+.reveal p {
+    font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.reveal ul {
+    font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+    line-height: 1.7;
+    list-style: none;
+    padding-left: 1.2em;
+}
+.reveal ul li {
+    position: relative;
+}
+.reveal ul li::before {
+    content: '';
+    position: absolute;
+    left: -1.2em;
+    top: 0.6em;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px rgba(247, 147, 26, 0.15);
+}
+
+.reveal li {
+    margin-bottom: 0.5em;
+}
+
+/* Bitcoin definition section */
+.bitcoin-definition p {
+    font-size: clamp(1rem, 2.8vw, 1.1rem);
+    margin-bottom: 1.5em;
+    padding: 1em;
+    background: linear-gradient(135deg, #f7931a, #ff6b35);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(247, 147, 26, 0.3);
+}
+
+/* Crypto definition section */
+.crypto-definition p {
+    font-size: clamp(1rem, 2.8vw, 1.1rem);
+    margin-bottom: 1.5em;
+    padding: 1em;
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+}
+
+/* Principles grid */
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.principle {
+    text-align: center;
+    padding: 1.25em;
+    background: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.principle:hover {
+    transform: translateY(-5px);
+}
+
+.principle i {
+    font-size: 2.2em;
+    color: #f7931a;
+    margin-bottom: 0.5em;
+}
+
+.principle h4 {
+    color: #f7931a;
+    margin-bottom: 0.5em;
+}
+
+/* Crypto types */
+.crypto-types {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
+.crypto-type {
+    padding: 1em;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #6c5ce7;
+}
+
+.crypto-type h4 {
+    color: #6c5ce7;
+    margin-bottom: 0.5em;
+}
+
+/* Comparison table */
+.comparison-table {
+    margin-top: 2em;
+    overflow-x: auto;
+}
+
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
+    table-layout: fixed;
+    background: var(--surface-2);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.comparison-table th {
+    background: #f7931a;
+    color: white;
+    padding: 0.75em;
+    text-align: left;
+    font-weight: 600;
+}
+
+.comparison-table td {
+    padding: 0.75em;
+    border-bottom: 1px solid #ddd;
+}
+
+.comparison-table th,
+.comparison-table td {
+    word-break: break-word;
+    white-space: normal;
+}
+
+.comparison-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.comparison-table tr:hover {
+    background: #e3f2fd;
+}
+
+/* Bitcoin advantages */
+.bitcoin-advantages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.advantage {
+    text-align: center;
+    padding: 1.25em;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.advantage i {
+    font-size: 2.2em;
+    color: #f7931a;
+    margin-bottom: 0.5em;
+}
+
+.advantage h3 {
+    color: #f7931a;
+    margin-bottom: 0.5em;
+}
+
+/* Properties list */
+.properties-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
+.property {
+    padding: 1.5em;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #f7931a;
+}
+
+.property h4 {
+    color: #f7931a;
+    margin-bottom: 0.5em;
+}
+
+/* Future vision */
+.future-vision {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.vision-item {
+    text-align: center;
+    padding: 1.25em;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.vision-item i {
+    font-size: 2.2em;
+    color: #1976d2;
+    margin-bottom: 0.5em;
+}
+
+.vision-item h3 {
+    color: #1976d2;
+    margin-bottom: 0.5em;
+}
+
+/* Takeaways */
+.takeaways {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
+.takeaway {
+    display: flex;
+    align-items: center;
+    padding: 1.1em;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.takeaway i {
+    font-size: 1.6em;
+    margin-right: 1em;
+}
+
+.takeaway p {
+    margin: 0;
+    font-size: 1.05em;
+    font-weight: 500;
+}
+
+/* Contact info */
+.contact-info {
+    margin-top: 2em;
+    padding: 1em;
+    background: #f8f9fa;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    color: #f7931a;
+    margin: 0;
+}
+
+/* Fragment animations */
+.reveal .fragment {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.reveal .fragment.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Custom fragment animations */
+.reveal .fragment.fade-in {
+    opacity: 0;
+}
+
+.reveal .fragment.fade-in.visible {
+    opacity: 1;
+}
+
+.reveal .fragment.slide-up {
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.reveal .fragment.slide-up.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Container sizing to avoid overflow */
+.reveal .slides section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+}
+
+/* Title icon sizing */
+.reveal h1 i {
+    font-size: 0.8em;
+}
+
+/* Utility: two-column grid */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+/* Image placeholder styling */
+.image-placeholder {
+    margin-top: 1rem;
+    padding: 1.25rem;
+    border: 2px dashed #d0d7de;
+    border-radius: 10px;
+    color: var(--muted);
+    background: #fafafa;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+/* Slide image (real image container) */
+.slide-image,
+.slide-image-large {
+	margin: 0.8rem auto 0;
+	padding: 0;
+	background: transparent;
+	border-radius: 12px;
+	overflow: visible;
+	box-shadow: var(--shadow);
+	text-align: center;
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.slide-image img {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-height: 30vh;
+	object-fit: contain;
+}
+.slide-image-large img {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-height: 60vh;
+	object-fit: contain;
+}
+
+/* Reveal controls and progress */
+.reveal .progress {
+    height: 6px;
+    background: #eee;
+}
+.reveal .progress span {
+    background: var(--accent) !important;
+}
+.reveal .controls button {
+    color: var(--accent) !important;
+    transition: transform 0.15s ease;
+}
+.reveal .controls button:hover {
+    transform: scale(1.08);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .principles-grid,
+    .crypto-types,
+    .bitcoin-advantages,
+    .properties-list,
+    .future-vision,
+    .takeaways {
+        grid-template-columns: 1fr;
+    }
+    
+    .reveal h1 {
+        font-size: 2.2em;
+    }
+    
+    .reveal h2 {
+        font-size: 1.6em;
+    }
+    
+    .reveal p,
+    .reveal ul {
+        font-size: 1rem;
+    }
+    
+    .comparison-table {
+        font-size: 0.9em;
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.5em;
+    }
+
+    .principle, .advantage, .vision-item {
+        padding: 1em;
+    }
+
+    .principle i,
+    .advantage i,
+    .vision-item i {
+        font-size: 1.6em;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1200px) {
+    .bitcoin-advantages,
+    .future-vision {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25em;
+    }
+}
+
+/* Conclusion slide sizing */
+section.slide--conclusion h2 {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+}
+section.slide--conclusion .takeaway p {
+    font-size: 0.95em;
+}
+.final-quote {
+    font-size: clamp(0.95rem, 2.6vw, 1.1rem) !important;
+    line-height: 1.5;
+    max-width: 760px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    letter-spacing: 0.1px;
+}
+
+/* Conclusion slide visual polish */
+section.slide--conclusion {
+    color: #ffffff;
+}
+section.slide--conclusion h2 {
+    color: #ffffff;
+    padding-bottom: 0.25em;
+}
+section.slide--conclusion h2:after {
+    background: rgba(255, 255, 255, 0.9);
+}
+section.slide--conclusion .takeaways {
+    gap: 1em;
+    margin-top: 1.1em;
+    margin-bottom: 0.6em;
+}
+section.slide--conclusion .takeaway {
+    background: #ffffff;
+    color: var(--text);
+    box-shadow: var(--shadow);
+    padding: 0.8em 0.9em;
+    backdrop-filter: none;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.75em;
+    align-items: start;
+    border: 1px solid rgba(17, 24, 39, 0.06);
+}
+section.slide--conclusion .takeaway p {
+    color: var(--text) !important;
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+    line-height: 1.35;
+}
+section.slide--conclusion .takeaway i {
+    color: var(--accent) !important;
+    background: transparent;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    font-size: 1.1em;
+    margin-top: 0.1em;
+}
+section.slide--conclusion .final-quote {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+section.slide--conclusion .image-placeholder {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.6);
+    color: #ffffff;
+}
+
+/* Slightly smaller quote on large screens */
+.final-quote {
+    font-size: clamp(0.85rem, 2.2vw, 1rem) !important;
+    margin-top: 0.75em !important;
+    margin-bottom: 0.35em !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f7931a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e8841a;
+}

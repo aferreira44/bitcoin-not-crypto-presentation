@@ -1,0 +1,24 @@
+{
+  "name": "bitcoin-not-crypto-presentation",
+  "version": "1.0.0",
+  "description": "A reveal.js presentation about Bitcoin vs Crypto",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx reveal-md . --theme white --highlight-theme github",
+    "serve": "npx http-server . -p 8080",
+    "dev": "npx live-server . --port=8080"
+  },
+  "keywords": [
+    "bitcoin",
+    "crypto",
+    "presentation",
+    "reveal.js"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "reveal.js": "^4.6.1",
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  }
+}
